@@ -1,0 +1,122 @@
+html{
+  margin: 0;
+  padding:0;
+  height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+}
+/* light theme colors */
+.light-theme{
+  --bg: white;
+  --bg-panel: white;
+  --input:white;
+  --text-color: #707070;
+  --border: rgba(112,112,112,0.5);
+  --search-icon : url(./images/search-light-100.png);
+}
+/* dark theme colors */
+.dark-theme{
+  --bg: #232931;
+  --bg-panel: #393E46;
+  --input: #5D6167;
+  --text-color: #B5B5B5;
+  --border: rgba(191,191,191,0.5);
+  --search-icon : url(./images/search-dark-100.png);
+}
+body{
+  background-color: var(--bg);
+}
+/* container */
+.container{
+  /* width: 600px;
+  height: 335px; */
+  width: 40vw;
+  height: 46vh;
+  text-align: center;
+  border-radius: 28px;
+  background-color: var(--bg-panel);
+  /* this is used for svg path */
+  fill: currentColor;
+  color: var(--text-color);
+  box-shadow: 0 10px 70px rgba(0, 0, 0, 0.2);
+}
+/* weather icon */
+svg{
+  margin-top: 1rem;
+  width: 100px;
+  fill: currentColor;
+}
+svg path:last-child{
+  fill: currentColor;
+}
+/* climate condition */
+.climateCondition{
+  margin-top: -0.5rem;
+  font-size: 35px;
+  color: var(--text-color);
+}
+input{
+  margin-top: 1.5rem;  
+  padding: 0.7rem 1rem;
+  width: 30vw;
+  border-radius: 14px;
+  border-style: none;
+  font-size: 20px;
+  box-shadow: 0 2px 19px rgba(0, 0, 0, 0.2);
+  letter-spacing: 0.7px;
+  background: var(--search-icon);
+  background-repeat: no-repeat;
+  /* background-position: right; */
+  background-position: 450px;
+  background-size: 25px 25px;
+  background-color: var(--input);
+}
+input:focus{
+  outline: none;
+}
+input::placeholder{
+  color: var(--text-color);
+  opacity: 0.6;
+}
+/* forcast details */
+.forcast{
+  margin-left:20px;
+  margin: 1.8rem 1.5rem 1.8rem 1.5rem;
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+.wind{
+  border-left: 1.2px solid var(--border);
+  border-right: 1.2px solid var(--border);
+}
+.forcast-item p{
+  font-size: 20px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  color: var(--text-color);
+}
+.forcast-item p:last-child{
+  font-size: 15px;
+  margin-top: 0.3rem;
+  margin-bottom: 0px;
+}
+/* theme icon */
+.icon{
+  position: absolute;
+  top: 0;
+  right:0;
+}
+.icon img{
+  width: 50px;
+  margin: 50px;
+}
+/* transition */
+html.transition,
+html.transition *,
+html.transition *:before,
+html.transition *:after {
+  transition: all 750ms !important;
+  transition-delay: 0 !important;
+}
