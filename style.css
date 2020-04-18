@@ -57,7 +57,7 @@ svg path:last-child{
   color: var(--text-color);
 }
 input{
-  margin-top: 1.5rem;  
+  margin-top: 1.5rem;
   padding: 0.7rem 1rem;
   width: 30vw;
   border-radius: 14px;
@@ -138,6 +138,7 @@ html.transition *:after {
   input{
     width: 55vw;
     font-size: 15px;
+    background-position: calc(100% - 15px) center;
   }
   .forcast-item p{
     font-size: 15px;
