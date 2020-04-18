@@ -30,10 +30,10 @@ body{
 }
 /* container */
 .container{
-  /* width: 600px;
-  height: 335px; */
-  width: 40vw;
-  height: 46vh;
+  width: 600px;
+  height: 335px;
+  /* width: 40vw;
+  height: 46vh; */
   text-align: center;
   border-radius: 28px;
   background-color: var(--bg-panel);
@@ -124,8 +124,10 @@ html.transition *:after {
 
 @media (max-width:768px){
   .container{
-    width: 80vw;
-    height: 50vh;
+    /* width: 80vw;
+    height: 50vh; */
+    width: 300px;
+    height: 300px;
   }
   svg{
     width: 80px;
@@ -134,7 +136,7 @@ html.transition *:after {
     font-size: 25px;
   }
   input{
-    width: 50vw;
+    width: 55vw;
     font-size: 15px;
   }
   .forcast-item p{
