@@ -46,7 +46,6 @@ body{
 svg{
   margin-top: 1rem;
   width: 100px;
-  fill: currentColor;
 }
 svg path:last-child{
   fill: currentColor;
@@ -69,9 +68,11 @@ input{
   background: var(--search-icon);
   background-repeat: no-repeat;
   /* background-position: right; */
-  background-position: 450px;
+  /* background-position: 450px; */
+  background-position: calc(100% - 20px) center;
   background-size: 25px 25px;
   background-color: var(--input);
+  color: var(--text-color);
 }
 input:focus{
   outline: none;
@@ -119,4 +120,31 @@ html.transition *:before,
 html.transition *:after {
   transition: all 750ms !important;
   transition-delay: 0 !important;
+}
+
+@media (max-width:768px){
+  .container{
+    width: 80vw;
+    height: 50vh;
+  }
+  svg{
+    width: 80px;
+  }  
+  .climateCondition{
+    font-size: 25px;
+  }
+  input{
+    width: 50vw;
+    font-size: 15px;
+  }
+  .forcast-item p{
+    font-size: 15px;
+  }
+  .forcast-item p:last-child{
+    font-size: 10px;
+  }
+  .icon img{
+    width: 40px;
+    margin: 40px;
+  }
 }
