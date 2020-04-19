@@ -23,8 +23,9 @@ else{
 // weather api call
 var climateCondition = document.querySelector('.climateCondition');
 var temperature = document.querySelector('.temp');
-const wind = document.querySelector('.winds');
-const humidity = document.querySelector('.humidity');
+var wind = document.querySelector('.winds');
+var humidity = document.querySelector('.humidity');
+var icon = document.querySelector('i');
 
 window.onkeyup = keyup;
 //creates a global Javascript variable
@@ -40,6 +41,22 @@ function keyup(e) {
       temperature.innerHTML = (data.main.temp-272.15).toFixed(2) + ' °c';
       wind.innerHTML = data.wind.speed + ' m/s';
       humidity.innerHTML = data.main.humidity;
+
+      var prefix = "wi wi-";
+
+      var today = new Date();
+      var hour = today.getHours();
+
+      if (hour > 6 && hour < 20) {
+      //Day time
+      dorn = "day-";
+      } else {
+      //Night time
+      dorn ="night-";
+      }
+      var code = data.weather[0].id;
+      iconD = prefix + "owm-" +dorn+ code;
+      icon.setAttribute('class',iconD);
     })
     .catch(err => {
       alert("kindly enter city name correctly");
